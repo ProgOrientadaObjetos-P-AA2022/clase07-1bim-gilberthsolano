@@ -23,7 +23,8 @@ public class ArchivoEscritura {
 
     public ArchivoEscritura(String n) {
         nombreArchivo = n;
-        rutaArchivo = String.format("data/%s", nombreArchivo);
+        rutaArchivo = String.format("data/%s", nombreArchivo);//data/profesores2.txt
+        
         
     }
 
@@ -55,8 +56,8 @@ public class ArchivoEscritura {
     // agrega registros al archivo
     public void establecerSalida() {
         try {
-            salidaArchivo = new Formatter(new FileWriter(rutaArchivo, true));
-            Profesor p = obtenerRegistro();
+            salidaArchivo = new Formatter(new FileWriter(rutaArchivo, true));//no pierda la informacion todo lo nuevo la aniada
+            Profesor p = obtenerRegistro();//Profesor con variable p
             
             String cadenaRegistro = String.format("%s;%s",
                     p.obtenerNombre(), p.obtenerTipo());

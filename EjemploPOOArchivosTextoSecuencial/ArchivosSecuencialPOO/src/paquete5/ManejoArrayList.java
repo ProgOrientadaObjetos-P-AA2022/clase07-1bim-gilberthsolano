@@ -18,12 +18,12 @@ public class ManejoArrayList {
         Profesor prof2 = new Profesor("David Jones", "nombramiento");
         
         // Arreglo
-        Profesor [] profesores = new Profesor[2];
+        Profesor [] profesores = new Profesor[2];//numero de elementos de ese arreglo
         profesores[0] = prof1;
         profesores[1] = prof2;
         
         for (int i = 0; i < profesores.length; i++) {
-            System.out.printf("%s - %s\n", profesores[i].obtenerNombre(),
+            System.out.printf("%s - %s\n", profesores[i].obtenerNombre(),//dos cadenas con salto de linea objeto de tipo profesor
                     profesores[i].obtenerTipo());
         }
         
@@ -34,7 +34,7 @@ public class ManejoArrayList {
         profesores2.add(prof1);
         profesores2.add(prof2);
         
-        for (int i = 0; i < profesores2.size(); i++) {
+        for (int i = 0; i < profesores2.size(); i++) { // para obtener tamanio objeto
             System.out.printf("%s - %s\n", profesores2.get(i).obtenerNombre(),
                     profesores2.get(i).obtenerTipo());
         }
@@ -42,10 +42,10 @@ public class ManejoArrayList {
         System.out.println("-----------------------------");
         
         Profesor prof3 = new Profesor("Melissa Gilbert", "contratado");
-        profesores2.add(prof3);
+        profesores2.add(prof3); //para obtener
         
         for (int i = 0; i < profesores2.size(); i++) {
-            System.out.printf("%s - %s\n", profesores2.get(i).obtenerNombre(),
+            System.out.printf("%s - %s\n", profesores2.get(i).obtenerNombre(), // con get para recuperar
                     profesores2.get(i).obtenerTipo());
         }
     }

@@ -22,12 +22,12 @@ public class ArchivoLectura {
 
     public ArchivoLectura(String n) {
         nombreArchivo = n;
-        rutaArchivo = String.format("data/%s", nombreArchivo);
+        rutaArchivo = String.format("data/%s", nombreArchivo);// de donde voy a leer
         // data/profesores.txt
         File f = new File(rutaArchivo); // data/profesores.txt
         if (f.exists()) {
             try {
-                entrada = new Scanner(new File(rutaArchivo));
+                entrada = new Scanner(new File(rutaArchivo));//escaner le envio los datos del archivo
                 // entrada = new Scanner(System.in);
                 // entrada = new Scanner(f);
             } // fin de try
@@ -63,11 +63,11 @@ public class ArchivoLectura {
 
         if (f.exists()) {
 
-            while (entrada.hasNext()) {
+            while (entrada.hasNext()) { //hasNext dando vueltas mientras que entrada encuentre algo 
                 String linea = entrada.nextLine(); // Tara Hernandez;contratado
 
                 ArrayList<String> linea_partes = new ArrayList<>(
-                        Arrays.asList(linea.split(";")) // ["Tara Hernandez", "contratado"]
+                        Arrays.asList(linea.split(";")) // ["Tara Hernandez", "contratado"]//aqui quedamos
                 );
                 Profesor p = new Profesor(linea_partes.get(0), // Tara Hernandez
                         linea_partes.get(1) // contratado
