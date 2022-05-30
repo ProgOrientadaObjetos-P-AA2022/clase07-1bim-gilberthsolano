@@ -5,9 +5,9 @@
  */
 package paquete4;
 
-import java.io.FileOutputStream;
+import java.io.FileOutputStream;//escribir
 import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.ObjectOutputStream;//escribir objectos
 import java.util.ArrayList;
 
 

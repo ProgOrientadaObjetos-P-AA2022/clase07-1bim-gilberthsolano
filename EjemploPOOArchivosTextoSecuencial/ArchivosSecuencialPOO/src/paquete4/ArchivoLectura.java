@@ -68,7 +68,7 @@ public class ArchivoLectura {
                 String linea = entrada.nextLine();
 
                 ArrayList<String> linea_partes = new ArrayList<>(
-                        Arrays.asList(linea.split(";"))
+                        Arrays.asList(linea.split("\\|")) //para que entienda el lenguaje
                 );
                 Empresa p = new Empresa(linea_partes.get(0),
                         linea_partes.get(1));
